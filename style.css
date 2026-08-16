@@ -86,6 +86,64 @@ body {
 
 .header {
     border-bottom: 1px solid var(--color-carbon-black);
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    color: var(--color-platinum);
+    padding: 1rem 2rem;
+}
+
+.header-top-row {
+    display: grid;
+    grid-template-columns: 24px 1fr 24px 32px auto;
+    align-items: center;
+    gap: 1rem;
+
+    &>input {
+        height: 24px;
+        border-radius: 4px;
+        border: none;
+        margin-right: 12rem;
+    }
+
+    &>.header-user-name {
+        font-weight: 900;
+    }
+}
+
+.header-bottom-row {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 64px 1fr repeat(3, 6rem);
+    gap: 1rem;
+
+    &>button {
+        width: 6rem;
+        height: 2rem;
+        border-radius: 4px;
+        border: 1px solid var(--color-carbon-black);
+        background: var(--color-black);
+        color: var(--color-white);
+    }
+
+    &>.welcome-text {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        align-items: center;
+    }
+
+    &>.welcome-text>p {
+        margin: 0;
+    }
+
+    &>.welcome-text>.welcome-text-user-name {
+        font-size: 1.5rem;
+        font-weight: 900;
+    }
+
+    &>button:hover,
+    &>button:active {
+        background: var(--color-carbon-black);
+    }
 }
 
 .main-content {}
