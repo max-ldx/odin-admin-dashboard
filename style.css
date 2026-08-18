@@ -75,6 +75,8 @@ h6 {
     --color-platinum: oklch(0.9461 0 0);
     --color-highlight: oklch(1 0 0 / .2);
     --color-shadow: oklch(0 0 0 / .2);
+
+    --border-radius: 4px;
 }
 
 body {
@@ -109,7 +111,7 @@ body {
     padding: .5rem;
     padding-left: .75rem;
     gap: 1.75rem;
-    border-radius: 4px;
+    border-radius: var(--border-radius);
     cursor: pointer;
     font-size: 1.5rem;
 }
@@ -121,7 +123,49 @@ body {
 .header {
     background: var(--color-white);
     box-shadow: 0px 2px 5px var(--color-shadow);
+    padding: 1rem 2rem;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
 }
 
-.main {
+.header-top-row {
+    display: grid;
+    grid-template-columns: 24px 1fr 24px 48px auto;
+    align-content: start;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.25rem;
+    font-weight: 900;
 }
+
+input {
+    border: none;
+    border-radius: var(--border-radius);
+    background: var(--color-platinum);
+}
+
+.header-bottom-row {
+    display: grid;
+    grid-template-columns: 64px 1fr repeat(3, 5rem);
+    align-items: center;
+    gap: 1rem;
+}
+
+.welcome-text {
+    font-weight: 900;
+}
+
+.welcome-text-name {
+    font-size: 1.5rem;
+}
+
+.header-button {
+    background: var(--color-baltic-blue);
+    color: var(--color-white);
+    border: none;
+    border-radius: var(--border-radius);
+    padding: .5rem;
+    cursor: pointer;
+}
+
+.main {}
