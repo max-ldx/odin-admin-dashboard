@@ -73,6 +73,7 @@ h6 {
     --color-baltic-blue: oklch(0.4869 0.1247 254.56);
     --color-amber-glow: oklch(0.7956 0.1623 68.53);
     --color-platinum: oklch(0.9461 0 0);
+    --color-baltic-blue-highlight: oklch(0.4869 0.1247 254.56 / .8);
     --color-highlight: oklch(1 0 0 / .2);
     --color-shadow: oklch(0 0 0 / .2);
 
@@ -168,4 +169,104 @@ input {
     cursor: pointer;
 }
 
-.main {}
+.header-button:hover {
+    background: var(--color-baltic-blue-highlight);
+}
+
+.main {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 20rem;
+    gap: 1rem;
+}
+
+.projects {
+    display: grid;
+    gap: .5rem;
+    align-content: start;
+}
+
+.projects-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 30rem);
+    grid-auto-rows: 15rem;
+    gap: 1rem;
+}
+
+.project-card {
+    background: var(--color-white);
+    width: 30rem;
+    height: 15rem;
+    display: grid;
+    grid-template-columns: .5rem 1fr;
+    border-radius: var(--border-radius);
+    box-shadow: 0px 5px 5px var(--color-shadow);
+}
+
+.color-strip {
+    background: var(--color-amber-glow);
+    border-top-left-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
+}
+
+.card-content {
+    padding: 2rem;
+    display: grid;
+}
+
+.card-icons {
+    display: grid;
+    grid-template-columns: repeat(3, 24px);
+    gap: 1rem;
+    justify-content: end;
+}
+
+.other {
+    display: grid;
+    align-content: start;
+    gap: 2rem;
+}
+
+.announcements {
+    display: grid;
+    grid-template-rows: auto 22rem;
+    gap: .5rem;
+}
+
+.announcements-card {
+    background: var(--color-white);
+    box-shadow: 0px 5px 5px var(--color-shadow);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.announcement>hr {
+    margin-top: 1rem;
+    height: 1px;
+    border: none;
+    background: var(--color-platinum);
+}
+
+.trending {
+    display: grid;
+    grid-template-rows: auto 20rem;
+    gap: .5rem;
+}
+
+.trending-card {
+    background: var(--color-white);
+    box-shadow: 0px 5px 5px var(--color-shadow);
+    border-radius: var(--border-radius);
+    display: grid;
+    gap: 1rem;
+    padding: 2rem;
+    align-content: start;
+}
+
+.project {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 1rem;
+}
